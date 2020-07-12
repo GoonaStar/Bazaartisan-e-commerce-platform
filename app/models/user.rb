@@ -26,7 +26,6 @@ class User < ApplicationRecord
 
   def send_welcome_mail
       new_email = User.last.email
-      Mailing.new.new_subscriber(new_email)
       # EmailSender.send_welcome_mail(email: email)
   end
  

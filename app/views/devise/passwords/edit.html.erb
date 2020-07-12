@@ -1,4 +1,4 @@
-<% title('Mon mot de passe - KraftMarket') %>
+<% title('My password - Bazaartisan') %>
 
 <h2>Modifier votre mot de passe</h2>
 
@@ -7,7 +7,7 @@
   <%= f.hidden_field :reset_password_token %>
 
   <div class="field">
-    <%= f.label :password, "Nouveau mot de passe" %><br />
+    <%= f.label :password, "New password" %><br />
     <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em><br />
     <% end %>
@@ -15,12 +15,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmer votre nouveau mot de passe" %><br />
+    <%= f.label :password_confirmation, "Confirm your new password" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Changer mon mot de passe" %>
+    <%= f.submit "Modify" %>
   </div>
 <% end %>
 

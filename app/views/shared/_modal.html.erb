@@ -19,11 +19,11 @@
 						<div class="tab-content" id="tab1" style="">
 							<form method="post" class="login">
 
-								<p style="color: black;">Vous avez déjà un objet réservé ! Veuillez finaliser votre commande ou l'annuler.</p>
+								<p style="color: black;">You have a product booked. Finalize your order or cancel it.</p>
 
 								<div class="form-row">
-                                    <%= link_to 'Continuer', root_path, class: "btn-modal button fullwidth margin-top-10" %>
-                                    <%= link_to 'Finaliser ma commande', cart_path(current_user.cart.id), class: "btn-modal button fullwidth margin-top-10" %>
+                                    <%= link_to 'Continue', root_path, class: "btn-modal button fullwidth margin-top-10" %>
+                                    <%= link_to 'Finalize my order', cart_path(current_user.cart.id), class: "btn-modal button fullwidth margin-top-10" %>
 								</div>
 								
 							</form>

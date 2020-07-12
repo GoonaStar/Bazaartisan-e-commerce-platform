@@ -1,4 +1,4 @@
-<% title('Inscription - KraftMarket') %>
+<% title('Register - Bazzartisan') %>
 
 
 <div id="wrapper">
@@ -7,12 +7,12 @@
     <div class='container'>
       <div class="row">
         <div class="col-md-12">
-          <h2>Inscription</h2>
+          <h2>Register</h2>
           <!-- Breadcrumbs -->
           <nav id="breadcrumbs">
             <ul>
-              <li><%= link_to "Accueil", root_path %></li>
-              <li><%= link_to "Inscription", new_registration_path(resource_name) %></li>
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Register", new_registration_path(resource_name) %></li>
             </ul>
           </nav>
         </div>
@@ -37,7 +37,7 @@
               </div>
 
               <div class="field form-inline form-group">
-                <%= f.label :password, "Mot de passe " %>
+                <%= f.label :password, "Password  " %>
                 <% if @minimum_password_length %>
                    <i class="tip" data-tip-content='<%= @minimum_password_length.to_s %> caractères minimum' ></i>
                 <% end %>
@@ -45,22 +45,22 @@
               </div>
 
               <div class="field form-inline form-group">
-                <%= f.label :'Confirmez votre mot de passe' %>
+                <%= f.label :'Confirm your password' %>
                 <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
               </div>
 
               <div class="field form-inline">
-                <%= f.label :nom %><br />
-                <%= f.text_field :last_name, autofocus: true %>
+                <%= f.label :prénom, "First name" %><br />
+                <%= f.text_field :first_name, autofocus: true %>
               </div>
 
               <div class="field form-inline">
-                <%= f.label :prénom %><br />
-                <%= f.text_field :first_name, autofocus: true %>
+                <%= f.label :nom, "Last name" %><br />
+                <%= f.text_field :last_name, autofocus: true %>
               </div>
-              
+
               <div class="submit-section">
-                <%= f.label :image, "Image de profil " %><em>(optionnel)</em><br>
+                <%= f.label :image, "Profile picture " %><em>(optionnel)</em><br>
                 <%= f.file_field :avatar %>
               </div>
 

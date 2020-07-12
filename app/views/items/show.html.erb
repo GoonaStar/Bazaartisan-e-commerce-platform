@@ -1,4 +1,4 @@
-<% title(@item.title+' - KraftMarket') %>
+<% title(@item.title+' - Bazaartisan') %>
 
 <div id="wrapper">
     <div id="titlebar" class="gradient">
@@ -8,8 +8,8 @@
     	    		<!-- Breadcrumbs -->
     	    		<nav id="breadcrumbs" class='text-right'>
     	    			<ul>
-    	    				<li><%= link_to "Accueil", root_path %></li>
-    	    				<li><%= link_to "Ressources", items_path %></li>
+    	    				<li><%= link_to "Home", root_path %></li>
+    	    				<li><%= link_to "Resources", items_path %></li>
                             <li><%= link_to @item.category.category_name, items_path(item_filter:{category_id: @item.category_id}) %></li>
                             <li><%= link_to @item.title, item_path(@item.id) %></li>
     	    			</ul>
@@ -28,7 +28,7 @@
         					<h3><%= @item.title %></h3><br>
                             <% if @item.seller.first_name != nil %>
                                 <h4>
-                                    Vendu par
+                                    Sold by 
                                     <%= link_to public_profile_path(@item.seller.id), class:"green-link" do %>
                                         <%= @item.seller.first_name.capitalize %> <%= @item.seller.last_name.capitalize %>
                                     <% end %>
@@ -36,7 +36,7 @@
                             <% end %>
         				</div>
                         <div class="col-md-4">
-                            <h5>Image principale</h5>
+                            <h5>Product</h5>
                             <% if @item.item_images.attached? %>
                                 <%= image_tag @item.item_images[0].variant(resize: "300x300") %>
                                 <% else %> 
@@ -49,9 +49,9 @@
                         </div>
                         <div class="col-md-8">
                             <h5>Description:</h5> <p><%= @item.description%></p>
-                            <h5>Prix: <%= @item.price%> €</h5>
+                            <h5>Price: <%= @item.price%> €</h5>
                             <!-- Slider -->
-                            <h5>Toutes les images</h5>
+                            <h5>All the pictures</h5>
                             <div class="listing-slider-small mfp-gallery-container margin-bottom-0">
                                 <% if @item.item_images.attached? %>                                    
                                     <% @item.item_images.each do |i| %>
@@ -68,7 +68,7 @@
                         </div>
                         <p>
                             <% if @item.status != "sold" %>
-                                <%= button_to "Réserver l'article", carts_path(item_id:@item.id), method: :post, class:"btn btn-primary" %>
+                                <%= button_to "Buy", carts_path(item_id:@item.id), method: :post, class:"btn btn-primary" %>
                             <% end %>
                         </p>
         			</div>

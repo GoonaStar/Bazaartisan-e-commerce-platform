@@ -1,16 +1,16 @@
 <!-- Form section to modify personal info -->
 <div class='dashboard-list-box margin-top-0'>
 
-  <h4 class='gray'>Informations personnelles</h4>
+  <h4 class='gray'>Personal information</h4>
     <div class='dashboard-list-box-static'>
       <div class='my-profile'>
       
       <div class="form-group form-inline row mb-4">
-        <%= f.label :first_name, 'Prénom', class:'col-3 margin-top-0' %>
+        <%= f.label :first_name, 'First name', class:'col-3 margin-top-0' %>
         <%= f.text_field :first_name, value: @user.first_name, class:'col-8 form-control mb-0' %>
       </div>
       <div class="form-group form-inline row mb-4">
-        <%= f.label :last_name, 'Nom', class:'col-3 margin-top-0' %>
+        <%= f.label :last_name, 'Last name', class:'col-3 margin-top-0' %>
         <%= f.text_field :last_name, value: @user.last_name, class:'col-8 form-control mb-0' %>
       </div>
       <div class="form-group form-inline row mb-4">
@@ -18,15 +18,15 @@
         <%= f.email_field :email, value: @user.email, class:'col-8 form-control mb-0' %>
       </div>
       <div class="form-group form-inline row mb-4">
-        <%= f.label :phone_number, 'Téléphone', class:'col-3 margin-top-0' %>
+        <%= f.label :phone_number, 'Phone number', class:'col-3 margin-top-0' %>
         <%= f.text_field :phone_number, value: @user.phone_number, class:'col-8 form-control mb-0' %>
       </div>
       <div class="form-group form-inline row mb-4">
-        <%= f.label :job_name, 'Profession', class:'col-3 margin-top-0' %>
+        <%= f.label :job_name, 'Job', class:'col-3 margin-top-0' %>
         <%= f.text_field :job_name, value: @user.job_name, class:'col-8 form-control mb-0' %>
       </div>
       <div class="form-inline row">
-        <%= f.label :personal_description, 'Biographie', class:'col-3 margin-top-0' %>
+        <%= f.label :personal_description, 'Bio', class:'col-3 margin-top-0' %>
         <%= f.text_area :personal_description, value: @user.personal_description, class:'col-8 form-control mb-0' %>
       </div>
     </div>

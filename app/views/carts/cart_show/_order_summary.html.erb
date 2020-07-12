@@ -30,13 +30,13 @@
 
     <div class="boxed-widget opening-hours summary margin-top-0">
         <ul>
-            <li class="margin-top-0"><h4>Total à régler <span><%= @cart_item.price %> €</span></h4></li>
+            <li class="margin-top-0"><h4>Total <span><%= @cart_item.price %> €</span></h4></li>
         </ul>
     </div>
 
     <!-- Remove the item from the cart -->
     <div class="margin-top-10 justify-content-center d-flex">
-      <%= button_to 'Supprimer du panier', cart_path(id:@cart.id, item_id:@cart_item.id), method: :patch, data: { confirm: 'Voulez-vous annuler votre réservation ?' } %>
+      <%= button_to 'Remove from the cart', cart_path(id:@cart.id, item_id:@cart_item.id), method: :patch, data: { confirm: 'Would you like to cancel your order?' } %>
     </div>
 
 </div>

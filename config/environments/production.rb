@@ -66,11 +66,11 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "kraft-market_#{Rails.env}"
+  
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.default_url_options = { host: 'https://kraftmarket.herokuapp.com' }
+ 
   config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {

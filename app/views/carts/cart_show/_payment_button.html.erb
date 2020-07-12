@@ -5,11 +5,11 @@
     <script src="https://checkout.stripe.com/checkout.js" 
       class="stripe-button"
       data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-      data-description="Commande de <%= @cart_item.title %>"
+      data-description="Order of <%= @cart_item.title %>"
       data-amount="<%= (@cart_item.price) * 100 %>"
-      data-currency="eur"   
+      data-currency="$"   
       data-locale="auto"
-      data-label="Confirmer ma commande"
+      data-label="Confirm"
       method='create'>
 
     </script>

@@ -1,4 +1,4 @@
-<% title('Dashboard - KraftMarket') %>
+<% title('Dashboard - Bazaartisan') %>
 
 <div class='padding-top-0' id='dashboard'>
 
@@ -13,7 +13,7 @@
 			<div id="titlebar">
 				<div class="row">
 					<div class="col-sm-12 no-wrap">
-						<h2>Bienvenue
+						<h2>Welcome
 							<% if current_user.first_name? %>
 			                	<%= ' '+ current_user.first_name %>
 							<% end %> !
@@ -21,9 +21,9 @@
 						<!-- Breadcrumbs -->
 						<nav id="breadcrumbs" class='text-right'>
 							<ul>
-			    				<li><%= link_to "Accueil", root_path %></li>
-								<li><%= link_to "Mon profil", user_path(current_user.id) %></li>
-								<li><%= link_to "Tableau de bord", user_path(current_user.id) %></li>
+			    				<li><%= link_to "Home", root_path %></li>
+								<li><%= link_to "My profile", user_path(current_user.id) %></li>
+								<li><%= link_to "Dashboard", user_path(current_user.id) %></li>
 							</ul>
 						</nav>
 					</div>

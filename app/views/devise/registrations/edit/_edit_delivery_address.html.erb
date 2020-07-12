@@ -1,14 +1,14 @@
-<h2>Adresse de livraison</h2>
+<h2>Delivery address</h2>
 
 <div class=''>
 
   <div class="form-group form-inline row">
-    <div class='col-3'>Nom</div>
+    <div class='col-3'>Name</div>
     <%= f.text_field :delivery_entity, value: @user.delivery_entity, class:'form-control' %>
   </div>
 
   <div class="form-group form-inline row">
-    <div class='col-3'>Rue</div>
+    <div class='col-3'>Street</div>
     <div>
       <%= f.text_field :delivery_street, value: @user.delivery_street, class:'form-control' %><br/>
       <%= f.text_field :delivery_street2, value: @user.delivery_street2, class:'form-control' %>
@@ -16,23 +16,23 @@
   </div>
 
   <div class="form-group form-inline row">
-    <div class='col-3'>Code postal</div>
+    <div class='col-3'>Zip code</div>
     <%= f.text_field :delivery_postcode, value: @user.delivery_postcode, class:'form-control col-2' %>
   </div>
 
   <div class="form-group form-inline row">
-    <div class='col-3'>Ville</div>
+    <div class='col-3'>City</div>
     <%= f.text_field :delivery_city, value: @user.delivery_city, class:'form-control' %>
   </div>
 
   <div class="form-group form-inline row">
-    <div class='col-3'>Pays</div>
+    <div class='col-3'>Country</div>
     <%= f.country_select :invoice_country, priority_countries: ["FR"], value: @user.invoice_country, class:'form-control col-8 mb-0' %>
   </div>
 
   <div class="form-group form-inline row">
-    <div class='col-3'>Instructions de livraison</div><br/>
-    <em>Préciser si besoin le code, numéro de téléphone pour accéder au destinataire du colis</em>
+    <div class='col-3'>Delivery instructions</div><br/>
+    <em>Precise, if necessary, a code or phone number</em>
     <%= f.text_area :delivery_instructions, value: @user.delivery_instructions, class:'form-control' %>
   </div>
 

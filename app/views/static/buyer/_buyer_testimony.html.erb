@@ -1,7 +1,7 @@
 <section class="fullwidth fullwidth-carousel-container margin-top-65 padding-top-75 padding-bottom-70" data-background-color="#f8f8f8" data-turbolinks="false">
 			<div class="col-md-12">
 				<h3 class="headline centered margin-bottom-45">
-					Découvrez nos types de matériaux...
+					Discover some unique resources...
 				</h3>
 			</div>
 			<div class="fullwidth-slick-carousel category-carousel">
@@ -15,7 +15,7 @@
 										<h3><%= category.category_name %></h3>
 										<span><%= Item.where(category_id: category.id, status: "published").count %> articles</span>
 									</div>
-									<span class="category-box-btn">Voir</span>
+									<span class="category-box-btn">See</span>
 								</div>
 							</div>
 						<% end %>

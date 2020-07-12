@@ -24,19 +24,19 @@
           <li class="nav-item text-nowrap">
             <% if user_signed_in? %>
               <%= link_to new_item_path, class: "header-cta button no-wrap" do %>
-                <i class="fa fa-plus-square"></i>Nouvelle annonce
+                <i class="fa fa-plus-square"></i> Create an ad
               <% end %>
             <% else %>
-              <%= link_to "Devenez ravitailleur", home_seller_path, class: "header-cta button d-flex justify-content-end" %>
+              <%= link_to "Become merchant", home_seller_path, class: "header-cta button d-flex justify-content-end" %>
             <% end %>
          </li>
 
         <!-- Button to promote items -->
           <li class="nav-item text-nowrap">
             <% if user_signed_in? && current_user.is_buyer %>
-              <%= link_to "Découvrir les ressources", items_path, class: "nav-link" %>
+              <%= link_to "Crafting materials", items_path, class: "nav-link" %>
             <% else %>
-              <%= link_to "Découvrir les ressources", items_path, class: "nav-link" %>
+              <%= link_to "Crafting materials", items_path, class: "nav-link" %>
             <% end %>
           </li>
         <!-- Profile dropdown if signed-in or signin -->
@@ -44,21 +44,21 @@
           <% if user_signed_in? %>
 
             <li class="nav-item text-nowrap">
-               <%= link_to 'Mon compte', user_path(current_user.id), class: "nav-link" %>
+               <%= link_to 'My account', user_path(current_user.id), class: "nav-link" %>
              </li>
 
             <li class="nav-item nav-icon">
               <%= link_to destroy_user_session_path, method: :delete, class: "nav-link" do %>
-                <i class="fa fa-sign-out-alt" alt='Déconnexion'></i>
+                <i class="fa fa-sign-out-alt" alt='Log out'></i>
               <% end %>
             </li>
           <% else %>
 
             <li class="nav-item text-nowrap">
-                <%= link_to "Le concept", about_path, :class =>"nav-link" %>
+                <%= link_to "About us", about_path, :class =>"nav-link" %>
             </li>
             <li class="nav-item text-nowrap">
-              <%= link_to "Connexion", new_user_session_path,  :class =>"nav-link" %>
+              <%= link_to "Log in", new_user_session_path,  :class =>"nav-link" %>
             </li>
   
           <% end %>

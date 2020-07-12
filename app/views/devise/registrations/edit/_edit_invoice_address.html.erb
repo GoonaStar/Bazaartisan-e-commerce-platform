@@ -1,13 +1,13 @@
-<h2>Adresse de facturation</h2>
+<h2>Billing address</h2>
 
 <div class=''>
   <div class="form-group form-inline row">
-    <div class='col-3'>Nom</div>
+    <div class='col-3'>Name</div>
     <%= f.text_field :invoice_entity, value: @user.invoice_entity, class:'form-control' %>
   </div>
 
   <div class="form-group form-inline row">
-    <div class='col-3'>Rue</div>
+    <div class='col-3'>Street</div>
     <div>
       <%= f.text_field :invoice_street, value: @user.invoice_street, class:'form-control' %><br/>
       <%= f.text_field :invoice_street2, value: @user.invoice_street2, class:'form-control' %>
@@ -15,22 +15,22 @@
   </div>
 
   <div class="form-group form-inline row">
-    <div class='col-3'>Code postal</div>
+    <div class='col-3'>Zip code</div>
     <%= f.text_field :invoice_postcode, value: @user.invoice_postcode, class:'form-control col-2' %>
   </div>
 
   <div class="form-group form-inline row">
-    <div class='col-3'>Ville</div>
+    <div class='col-3'>City</div>
     <%= f.text_field :invoice_city, value: @user.invoice_city, class:'form-control' %>
   </div>
 
   <div class="form-group form-inline row">
-    <div class='col-3'>Pays</div>
+    <div class='col-3'>Country</div>
     <%= f.text_field :invoice_country, value: @user.invoice_country, class:'form-control' %>
   </div>
 
   <div class="form-group form-inline row">
-    <div class='col-3'>SIRET</div>
+    <div class='col-3'>Company ID number</div>
     <%= f.text_field :company_ID_number, value: @user.company_ID_number, class:'form-control' %>
   </div>
 

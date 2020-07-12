@@ -2,7 +2,7 @@
 	<ul>
 		<% if @user_sales.where(status: "sold").count == 0 %>
 			<li>
-                <h3>Vous n'avez pas encore vendu d'objets sur Kraft Market</i></h3>
+                <h3>You have no sold products on Bazaar'tisan... yet!</i></h3>
             </li>
 		<% else %>
  	    	<% @user_sales.where(status: "sold").each do |item| %>
@@ -28,7 +28,7 @@
 	    				</div>
 	    				<div class="list-box-listing-content col-6">
         	                <div class="inner text-right no-wrap">
-        	                    <span class='no-wrap'>Commandée le <%= item.updated_at.strftime("%d/%m/%y") %> </span>
+        	                    <span class='no-wrap'>Ordered on the <%= item.updated_at.strftime("%d/%m/%y") %> </span>
         	                    <span> à <%= item.updated_at.strftime("%H:%M") %></span>     	
                             </div>
 	    				</div>

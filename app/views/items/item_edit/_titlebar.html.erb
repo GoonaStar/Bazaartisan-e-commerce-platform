@@ -3,13 +3,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Modifier votre annonce</h2>
+				<h2>Modify your ad</h2>
 				<!-- Breadcrumbs -->
 				<nav id="breadcrumbs" class='text-right'>
 					<ul>
 						<% if user_signed_in? %>
-							<li><%= link_to "Accueil", root_path %></li>
-						    <li><%= link_to "Mes annonces", user_sales_path(current_user.id) %></li>
+							<li><%= link_to "Home", root_path %></li>
+						    <li><%= link_to "My ads", user_sales_path(current_user.id) %></li>
 						    <li><%= link_to @item.title, edit_item_path(@item.id) %></li>
 						<% end %> 
 					</ul>

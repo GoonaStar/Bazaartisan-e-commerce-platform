@@ -43,7 +43,7 @@ class Sirene
 		if @result['header']['statut'] == 200 #successful search
 			return false
 		elsif @result['header']['statut'] == 404
-			@error = 'Aucune entreprise ne correspond à votre recherche ('+@request+').'
+			@error = 'No company corresponds to your research ('+@request+').'
 			return true
 		else
 			@error = result['header']['statut'] +' : '+result['header']['message']

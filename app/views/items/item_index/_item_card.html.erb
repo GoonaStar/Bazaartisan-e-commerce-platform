@@ -21,7 +21,7 @@
             <% if item.cart %>
                 <% if item.cart.buyer != current_user %>
                     <div class="listing-badge now-closed">
-                        Déjà réservé
+                        Already booked
                     </div>
                 <% end %>
             <% end %>
@@ -31,14 +31,15 @@
             <div class="listing-item-content">
                 <span class="tag"><%= item.category.category_name %></span>
                 <h3><%= item.title %></h3>
-                <span>Posté il y a 
+                <span>Posted
                     <!-- Ruby script to calculate the delay since item post, to be put in a decorator -->
                 	<% diff_in_days = (Time.now - item.created_at)/(3600*24) %>
 					<% if diff_in_days < 1 %>
-						<%= pluralize(((Time.now - item.created_at)/3600).to_i, 'heure') %>
+						<%= pluralize(((Time.now - item.created_at)/3600).to_i, 'hours') %>
 					<% else %>
-						<%= pluralize(((Time.now - item.created_at)/(3600*24)).to_i, 'jour') %>
-					<% end%>							
+						<%= pluralize(((Time.now - item.created_at)/(3600*24)).to_i, 'days') %>
+                    <% end%>
+                    ago							
 				</span>
                 <span>
             </div>
@@ -48,7 +49,7 @@
         <!-- Link to seller public profle -->
         <div class='seller-link'>
             <span>
-                Vendu par <%= link_to public_profile_path(item.seller.id), class:"green-link" do %>
+                Sold by <%= link_to public_profile_path(item.seller.id), class:"green-link" do %>
                 <%= item.seller.first_name %>
                 <% end %>
             </span>
@@ -60,11 +61,11 @@
             <% if item.cart %>
                 <% if item.cart.buyer == current_user %>
                     <%= link_to cart_path(current_user.cart.id), {style: "background: orange;  text-decoration: none;", class:'button fullwidth'} do %>
-                        Ma réservation
+                        My order
                     <% end %>   
                 <% else %>
                     <button class="button fullwidth" style="background: red">
-                        Déjà réservé
+                        Already booked
                     </button>
                 <% end %>
             <% else %>

@@ -1,6 +1,6 @@
 <!-- Responsive Navigation Trigger -->
 <%= link_to '#', class:"dashboard-responsive-nav-trigger" do %>
-	<i class="fa fa-reorder"></i> Mon profil
+	<i class="fa fa-reorder"></i> My profile
 <% end %>
 
 <aside class="dashboard-nav">
@@ -9,19 +9,19 @@
 		<ul data-submenu-title="Activité">
 
 		    <li class="profile-tab" id='profile_dashboard' ><%= link_to user_path(@user.id) do %>
-				<i class="fa fa-tachometer-alt"></i> Tableau de bord
+				<i class="fa fa-tachometer-alt"></i> Dashboard
 				<% end %>
 			</li>
 	
 		    <!-- Tab to display user items -->
 		    <li class="profile-tab" id='seller' ><%= link_to user_sales_path(@user.id) do %>
-		    	<i class="fa fa-folder-open"></i> Annonces
+		    	<i class="fa fa-folder-open"></i> Ads
 				<% end %>
 		    </li>
 
 		    <!-- Tab to display user orders -->
 	      	<li class="profile-tab" id='buyer' ><%= link_to user_orders_path(@user.id) do %>
-	      		<i class="fa fa-shopping-basket"></i> Commandes
+	      		<i class="fa fa-shopping-basket"></i> Orders
 				<% end %>
 	      	</li>
 
@@ -31,18 +31,18 @@
 
 		<ul data-submenu-title="Compte">
 	      	<li class="profile-tab" id="profile-info" ><%= link_to edit_user_path(@user.id), id:"profile-info" do %>
-	      			<i class="fa fa-user-edit"></i> Détails du profil
+	      			<i class="fa fa-user-edit"></i> Profile details
 	      		<% end %>
 		      	<!-- Tabs that display separately profile information -->
 				<ul>
-				  	<li class="profile-section-tab" id='personal-info' ><a href='#personal' id='personal-info' >Coordonnées</a></li>
-					<li class="profile-section-tab" id='company-info' ><a href='#company' id='company-info' >Entreprise</a></li>
-				  	<li class="profile-section-tab" id='password-info' ><a href='#password' id='password-info' >Mot de passe</a></li>
+				  	<li class="profile-section-tab" id='personal-info' ><a href='#personal' id='personal-info' >Contact</a></li>
+					<li class="profile-section-tab" id='company-info' ><a href='#company' id='company-info' >Company</a></li>
+				  	<li class="profile-section-tab" id='password-info' ><a href='#password' id='password-info' >Password</a></li>
 				</ul>
 			</li>
 
 			<li class='profile-tab'><%= link_to destroy_user_session_path, method: :delete do %>
-				<i class="fa fa-sign-out-alt"></i> Déconnexion
+				<i class="fa fa-sign-out-alt"></i> Log out
 			<% end %></li>
 		</ul>
 

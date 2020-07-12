@@ -1,4 +1,4 @@
-<% title('Mes commandes - KraftMarket') %>
+<% title('My orders - Bazaartisan') %>
 
 <div class='padding-top-0' id='dashboard'>
 
@@ -13,14 +13,14 @@
 			<div id="titlebar">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Mes commandes</h2>
+						<h2>My orders</h2>
 						<hr>
 						<!-- Breadcrumbs -->
 						<nav id="breadcrumbs">
 							<ul>
-			    				<li><%= link_to "Accueil", root_path %></li>
-								<li><%= link_to "Mon profil", user_path(current_user.id) %></li>
-								<li><%= link_to "Mes commandes" %></li>
+			    				<li><%= link_to "Home", root_path %></li>
+								<li><%= link_to "My profile", user_path(current_user.id) %></li>
+								<li><%= link_to "My orders" %></li>
 							</ul>
 						</nav>
 					</div>
@@ -31,9 +31,9 @@
 				<div class="style-2">
 					<!-- Tabs Navigation -->
 					<ul class="tabs-nav" id='public-profile-tabs'>
-						<li><a href="#paid-orders"><i class="fas fa-euro-sign"></i> Objets payés <span class="nav-tag"><%= @user_orders.where(status: "paid").count %></span></a></li>
-						<li><a href="#shipped-orders"><i class="fas fa-bicycle"></i> En cours de livraison <span class="nav-tag"><%= @user_orders.where(status: "being_shipped").count %></span></a></li>
-						<li><a href="#sent-orders"><i class="fas fa-home"></i> Objets reçus <span class="nav-tag"><%= @user_orders.where(status: "shipped").count %></span></a></li>
+						<li><a href="#paid-orders"><i class="fas fa-euro-sign"></i> Objects payed <span class="nav-tag"><%= @user_orders.where(status: "paid").count %></span></a></li>
+						<li><a href="#shipped-orders"><i class="fas fa-bicycle"></i> In delivering <span class="nav-tag"><%= @user_orders.where(status: "being_shipped").count %></span></a></li>
+						<li><a href="#sent-orders"><i class="fas fa-home"></i> Received objects <span class="nav-tag"><%= @user_orders.where(status: "shipped").count %></span></a></li>
 					</ul>
 
 					<!-- Tabs Content -->

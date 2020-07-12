@@ -6,7 +6,7 @@
 			<div class="dashboard-stat color-1">
 				<div class="dashboard-stat-content">
 					<h4><%= @user_sales.where(status:'published').count %></h4>
-					<span><%= pluralize(@user_sales.where(status:'published').count,'Annonce','Annonces').split(' ')[1] %> en ligne</span>
+					<span><%= pluralize(@user_sales.where(status:'published').count,'Ads','Ads').split(' ')[1] %> online</span>
 				</div>
 				<div class="dashboard-stat-icon"><i class="fa fa-eye"></i></div>
 			</div>
@@ -18,7 +18,7 @@
 		<div class="dashboard-stat color-3">
 			<div class="dashboard-stat-content">
 				<h4></h4> 
-				<span>L'évaluation des vendeurs arrive bientôt sur KraftMarket</span>
+				<span>Sellers rating arrives soon on our platform</span>
 			</div>
 			<div class="dashboard-stat-icon"><i class="fa fa-star-half-alt"></i></div>
 		</div>
@@ -31,7 +31,7 @@
 		<div class="dashboard-stat color-4">
 			<div class="dashboard-stat-content">
 				<h4><%= @user_orders.count %></h4> 
-				<span><%= pluralize(@user_orders.count,'Objet','Objets').split(' ')[1] %> recyclés</span>
+				<span><%= pluralize(@user_orders.count,'Objects','Objects').split(' ')[1] %> recycled</span>
 			</div>
 			<div class="dashboard-stat-icon"><i class="fa fa-tags"></i></div>
 		</div>
@@ -43,7 +43,7 @@
 		<div class="dashboard-stat color-2">
 			<div class="dashboard-stat-content">
 				<h4></h4>
-				<span>Le suivi de vos vendeurs favoris arrive bientôt sur KraftMarket</span>
+				<span>Follow-up of your favorite sellers arrives soon on our platform</span>
 			</div>
 			<div class="dashboard-stat-icon"><i class="fa fa-bookmark"></i></div>
 		</div>

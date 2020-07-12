@@ -1,4 +1,4 @@
-<% title('Connexion - KraftMarket') %>
+<% title('Log in - Bazaartisan') %>
 
 
 <div id="wrapper" >
@@ -7,12 +7,12 @@
     <div class='container'>
       <div class="row">
         <div class="col-md-12">
-          <h2>Connexion</h2>
+          <h2>Log in</h2>
           <!-- Breadcrumbs -->
           <nav id="breadcrumbs">
             <ul>
-              <li><%= link_to "Accueil", root_path %></li>
-              <li><%= link_to "Connexion", new_session_path(resource_name) %></li>
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Log in", new_session_path(resource_name) %></li>
             </ul>
           </nav>
         </div>
@@ -31,19 +31,19 @@
           </div>
 
           <div class="field form-inline">
-            <%= f.label :"mot de passe" %>
+            <%= f.label :"Password" %>
             <%= f.password_field :password, autocomplete: "current-password" %>
           </div>
 
           <span class='lost_password'>
             <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-              <%= link_to "Mot de passe oublié ?", new_password_path(resource_name) %><br />
+              <%= link_to "Password forgotten?", new_password_path(resource_name) %><br />
             <% end -%>
           </span>
 
 
           <div class="actions d-flex justify-content-center mt-4">
-            <%= f.submit "Connexion" %>
+            <%= f.submit "Log in" %>
           </div>
 
         <% end %>
@@ -51,7 +51,7 @@
         <div class="margin-top-25">
           <span class='lost_password'>
             <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-                <%= link_to "Pas encore inscrit ?", new_registration_path(resource_name) %><br />
+                <%= link_to "Not already registered?", new_registration_path(resource_name) %><br />
             <% end -%>
           </span>
         </div>

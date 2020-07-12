@@ -1,7 +1,7 @@
 <div class="dashboard-list-box margin-top-0">
 	<ul>
 		<% if @user_adverts.count == 0 %>
-			<li><h3><%= @user.first_name %> n'a pas d'annonce en ligne</h3></li>
+			<li><h3><%= @user.first_name %> does not have any ads online</h3></li>
 		<% else %>
  	    	<% @user_adverts.each do |item| %>
 	    		<li>
@@ -26,7 +26,7 @@
 	    				</div>
 	    				<div class="list-box-listing-content col-3">
         	                <div class="inner text-right no-wrap">
-        	                    <span>Publié le <%= item.created_at.strftime("%d/%m/%y") %>
+        	                    <span>Published on the <%= item.created_at.strftime("%d/%m/%y") %>
         	                    à <%= item.created_at.strftime("%H:%M") %></span>
         	                </div>
 							<div class="inner text-right no-wrap">

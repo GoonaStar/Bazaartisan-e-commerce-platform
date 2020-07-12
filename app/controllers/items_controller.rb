@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
       @item = Item.new
     else
       redirect_to new_user_session_path
-      flash[:error] = "Vous devez être connecté pour publier un article"
+      flash[:error] = "Your have to be logged on to publish an ad"
     end
   end
 
@@ -19,7 +19,7 @@ class ItemsController < ApplicationController
     #Update the status of the user to tell he is a seller
     new_item.seller.update(is_seller:true)
 
-    redirect_to item_path(new_item.id), notice: "Merci d'avoir créé cet article"
+    redirect_to item_path(new_item.id), notice: "Great ! Your item is online"
   end
 
   def index
@@ -32,7 +32,7 @@ class ItemsController < ApplicationController
 
   def edit
     unless @item.seller == current_user
-      flash[:error] = "Vous n'avez pas les droits pour éditer cet objet"
+      flash[:error] = "You have no rights to edit this product"
       redirect_to item_path(params[:id])
     end
 
@@ -40,7 +40,7 @@ class ItemsController < ApplicationController
 
   def update
     @item.update(item_params)
-    redirect_to item_path(@item.id), notice: "Article modifié"
+    redirect_to item_path(@item.id), notice: "Product modified"
   end
 
   def destroy
@@ -53,7 +53,7 @@ class ItemsController < ApplicationController
     new_item.status = 'draft'
     new_item.save
 
-    flash[:notice] = "Votre annonce a été ajoutée à vos brouillons. Prenez le temps de la relire avant de la publier"
+    flash[:notice] = "Your ad has been sent to the draft. Take time to read it before publishing it"
     redirect_to edit_item_path(new_item.id)
   end
 
@@ -61,7 +61,7 @@ class ItemsController < ApplicationController
     @item.status = 'draft'
     @item.save
 
-    flash[:notice] = "Votre annonce a bien été ajoutée à vos brouillons."
+    flash[:notice] = "Your ad has been sent to the draft"
     redirect_to user_sales_path(current_user.id)
   end
   

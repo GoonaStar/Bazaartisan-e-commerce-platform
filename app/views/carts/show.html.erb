@@ -1,5 +1,5 @@
 <!-- Template page: http://www.vasterad.com/themes/listeo_latest/pages-booking.html -->
-<% title('Réservation - KraftMarket') %>
+<% title('My cart - Bazaartisan') %>
 
 <div id="wrapper">
   <%= render 'carts/cart_show/titlebar' %>
@@ -7,9 +7,9 @@
   <div class='container'>
     <% if @cart_item == nil %>
       <div class='empty-cart-container messages-container'>
-        <h3> Vous n'avez aucun objet réservé</h3>
+        <h3> You have no booked products</h3>
         <div>
-            <%= link_to "Découvrir les ressources", items_path, class:"button" %>
+            <%= link_to "Discover resources", items_path, class:"button" %>
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-<% title('Mon compte - KraftMarket') %>
+<% title('My account - Bazzartisan') %>
 
 <%= form_for(current_user, url: user_path(current_user.id), html: { method: :put }) do |f| %>
 
@@ -21,7 +21,7 @@
 </div>
 
   <div class="actions">
-    <%= f.submit "Confirmer les changements", class:'btn btn-success' %>
+    <%= f.submit "Confirm", class:'btn btn-success' %>
   </div>
 
 <% end %>
@@ -32,4 +32,4 @@
 
 <%= render 'cancel_registration' %>
 
-<%= link_to "Retour à la page précédente", :back %>
+<%= link_to "Back", :back %>

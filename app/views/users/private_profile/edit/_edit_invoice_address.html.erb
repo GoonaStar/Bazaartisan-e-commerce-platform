@@ -1,38 +1,38 @@
 <!-- Form section to modify default delivery address -->
 <div class='dashboard-list-box margin-top-0'>
 
-  <h4 class='gray'>Adresse de facturation</h4>
+  <h4 class='gray'>Billing address</h4>
 
   <div class='dashboard-list-box-static'>
     <div class='my-profile'>
 
       <div class="form-group form-inline row mb-4">
-        <%= f.label :invoice_entity, 'Raison sociale', class:'col-3 text-left' %>
+        <%= f.label :invoice_entity, 'Social reason', class:'col-3 text-left' %>
         <%= f.text_field :invoice_entity, value: @user.invoice_entity, class:'form-control col-8 mb-0' %>
       </div>
 
       <div class="form-group form-inline row mb-4">
-        <%= f.label :invoice_street, 'Rue', class:'col-3 text-left' %>
+        <%= f.label :invoice_street, 'Street line 1', class:'col-3 text-left' %>
         <%= f.text_field :invoice_street, value: @user.invoice_street, class:'form-control col-8 mb-0' %>
       </div>
 
       <div class="form-group form-inline row mb-4">
-        <%= f.label :invoice_street, 'Complément', class:'col-3 text-left' %>
+        <%= f.label :invoice_street, 'Street line 2', class:'col-3 text-left' %>
         <%= f.text_field :invoice_street2, value: @user.invoice_street2, class:'form-control col-8 mb-0' %>
       </div>
 
       <div class="form-group form-inline row mb-4">
-        <%= f.label :invoice_postcode, 'Code postal', class:'col-3 text-left' %>
+        <%= f.label :invoice_postcode, 'Zip code', class:'col-3 text-left' %>
         <%= f.text_field :invoice_postcode, value: @user.invoice_postcode, class:'form-control col-8 mb-0' %>
       </div>
 
       <div class="form-group form-inline row mb-4">
-        <%= f.label :invoice_city, 'Ville', class:'col-3 text-left' %>
+        <%= f.label :invoice_city, 'City', class:'col-3 text-left' %>
         <%= f.text_field :invoice_city, value: @user.invoice_city, class:'form-control col-8 mb-0' %>
       </div>
 
       <div class="form-inline row">
-        <%= f.label :invoice_country, 'Pays', class:'col-3 text-left' %>
+        <%= f.label :invoice_country, 'Country', class:'col-3 text-left' %>
         <%= f.country_select :invoice_country, priority_countries: ["FR"], value: @user.invoice_country, class:'form-control col-8 mb-0' %>
       </div>
       

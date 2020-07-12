@@ -18,7 +18,7 @@ class CartsController < ApplicationController
 
         redirect_to cart_path(cart.id)
       else
-        flash[:error] = "Vous avez déjà un objet réservé ! Veuillez finaliser votre commande ou l'annuler."
+        flash[:error] = "You alreadu have a booked object. Finalize or cancel it"
         redirect_to cart_path(cart.id)
       end
     else
@@ -26,7 +26,7 @@ class CartsController < ApplicationController
       session[:item_added_to_cart] = params[:item_id]
 
       # Flash when user not connected 
-      flash[:error] = "Vous devez être connecté pour commander un article"
+      flash[:error] = "You have to be logged on to book an article"
       redirect_to new_user_session_path
     end
 
@@ -48,7 +48,7 @@ class CartsController < ApplicationController
   def update
     Item.find(params[:item_id]).update(cart_id: nil)
 
-    flash[:notice] = "Votre commande a bien été annulée."
+    flash[:notice] = "Your order has been cancelled"
     redirect_to items_path
   end
 end

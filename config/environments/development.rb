@@ -38,8 +38,8 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.default_url_options = { host: 'https://kraftmarket-delivery.herokuapp.com' }
-  config.action_mailer.delivery_method = :smtp
+
+  #config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
   :user_name => ENV['sendgrid_username'],

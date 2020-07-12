@@ -2,7 +2,7 @@
 	<ul>
 		<% if @user_sales.where(status: "draft").count == 0 %>
 			<li>
-                <h3>Vous n'avez pas d'annonce en attente de publication</h3>
+                <h3>You have no drafts... yet!</h3>
             </li>
 		<% else %>
  	    	<% @user_sales.where(status: "draft").each do |item| %>
@@ -34,12 +34,12 @@
 	    				<!-- Card right part -->
 	    				<div class="list-box-listing-content col-4">
         	                <div class="inner text-right">
-        	                    <span class='no-wrap'>Créée le <%= item.created_at.strftime("%d/%m/%y") %> </span>
+        	                    <span class='no-wrap'>Created on the <%= item.created_at.strftime("%d/%m/%y") %> </span>
         	                    <span> à <%= item.created_at.strftime("%H:%M") %></span>
         	                    <div class='margin-top-10'>
-									<%= link_to edit_item_path(item.id), class:'button gray no-wrap' do %><i class="fa fa-edit"></i> Editer<% end %>
+									<%= link_to edit_item_path(item.id), class:'button gray no-wrap' do %><i class="fa fa-edit"></i> Edit<% end %>
 								</div>
-									<%= link_to item_path(item.id), method: :delete, class:'button cancel-button gray no-wrap' do %><i class="fa fa-times"></i> Supprimer<% end %>
+									<%= link_to item_path(item.id), method: :delete, class:'button cancel-button gray no-wrap' do %><i class="fa fa-times"></i> Delete<% end %>
         	                </div>
 	    				</div>
 	    			</div>

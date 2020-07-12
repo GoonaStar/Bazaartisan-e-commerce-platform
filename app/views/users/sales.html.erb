@@ -1,4 +1,4 @@
-<% title('Mes annonces - KraftMarket') %>
+<% title('My ads - Bazzartisan') %>
 
 <div class='padding-top-0' id='dashboard'>
 
@@ -13,14 +13,14 @@
 			<div id="titlebar">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Mes annonces</h2>
+						<h2>My ads</h2>
 						<hr>
 						<!-- Breadcrumbs -->
 						<nav id="breadcrumbs">
 							<ul>
-			    				<li><%= link_to "Accueil", root_path %></li>
-								<li><%= link_to "Mon profil", user_path(current_user.id) %></li>
-								<li><%= link_to "Mes annonces" %></li>
+			    				<li><%= link_to "Home", root_path %></li>
+								<li><%= link_to "My profile", user_path(current_user.id) %></li>
+								<li><%= link_to "My ads" %></li>
 							</ul>
 						</nav>
 					</div>
@@ -31,9 +31,9 @@
 				<div class="style-2">
 					<!-- Tabs Navigation -->
 					<ul class="tabs-nav" id='public-profile-tabs'>
-						<li><a href="#published"><i class="fas fa-eye"></i></i> En ligne <span class="nav-tag"><%= current_user.items.where(status: "published").count %></span></a></li>
-						<li><a href="#drafts"><i class="far fa-file-alt"></i></i> Brouillons <span class="nav-tag"><%= current_user.items.where(status: "draft").count %></span></a></li>
-						<li><a href="#sold"><i class="fas fa-handshake"></i> Objets vendus <span class="nav-tag"><%= current_user.items.where(status: "sold").count %></span></a></li>
+						<li><a href="#published"><i class="fas fa-eye"></i></i> Online <span class="nav-tag"><%= current_user.items.where(status: "published").count %></span></a></li>
+						<li><a href="#drafts"><i class="far fa-file-alt"></i></i> Drafts <span class="nav-tag"><%= current_user.items.where(status: "draft").count %></span></a></li>
+						<li><a href="#sold"><i class="fas fa-handshake"></i> Sold objects <span class="nav-tag"><%= current_user.items.where(status: "sold").count %></span></a></li>
 					</ul>
 
 					<!-- Tabs Content -->

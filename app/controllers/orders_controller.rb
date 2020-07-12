@@ -69,9 +69,9 @@ class OrdersController < ApplicationController
 
     #Envoi email confirmation : récupère email puis active le mailing.rb
     buyer_email = User.find(Order.last.buyer_id).email
-    Mailing.new.new_buyer(buyer_email)
+    
 
-    flash[:notice] = "Votre commande est confirmée. Vous avez reçu un email de confirmation"
+    flash[:notice] = "Your order is confirmed. You have received a confirmation mail"
     redirect_to user_path(current_user.id)
 
   end

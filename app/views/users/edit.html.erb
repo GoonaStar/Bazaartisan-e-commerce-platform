@@ -1,4 +1,4 @@
-<% title('Mon profil - KraftMarket') %>
+<% title('My profile - Bazaartisan') %>
 
 <div class='padding-top-0' id='dashboard'>
 
@@ -12,13 +12,13 @@
         <div id="titlebar">
           <div class="row">
             <div class="col-md-12">
-              <h2>Détails du profil</h2>
+              <h2>Profile details</h2>
               <!-- Breadcrumbs -->
               <nav id="breadcrumbs" class='text-right'>
                 <ul>
-                    <li><%= link_to "Accueil", root_path %></li>
-                  <li><%= link_to "Mon profil", user_path(@user.id) %></li>
-                  <li><%= link_to "Détails du profil" %></li>
+                    <li><%= link_to "Home", root_path %></li>
+                  <li><%= link_to "My profile", user_path(@user.id) %></li>
+                  <li><%= link_to "Profile details" %></li>
                 </ul>
               </nav>
             </div>
@@ -35,7 +35,7 @@
               <div class='col-md-12 col-lg-6'><%= render 'users/private_profile/edit/edit_delivery_address', f:f %></div>
             </div>
               <div class="d-flex justify-content-center row">
-                <%= f.submit "Sauvegarder", class:'button margin-top-15' %>
+                <%= f.submit "Save", class:'button margin-top-15' %>
             </div>
           </div>
 
@@ -46,7 +46,7 @@
               <div class='col-md-12 col-lg-6'><%= render 'users/private_profile/edit/edit_invoice_address', f:f %></div>
             </div>
               <div class="d-flex justify-content-center row">
-                <%= f.submit "Sauvegarder", class:'button margin-top-15 mx-auto' %>
+                <%= f.submit "Save", class:'button margin-top-15 mx-auto' %>
             </div>
           </div>
 

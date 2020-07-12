@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <body>
 
-<% title('Contactez-nous') %>
+<% title('Contact us') %>
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -17,11 +17,11 @@
 		<!-- Contact Details -->
 		<div class="col-md-4">
 
-			<h4 class="headline margin-bottom-30">Nous contacter</h4>
+			<h4 class="headline margin-bottom-30">Contact us</h4>
 
 			<!-- Contact Details -->
 			<div class="sidebar-textbox">
-				<p>Recyclez vos matières premières de qualité (cuir, toile de jute, papier...). Proposez ou trouvez les matières qui vous inspireront.</p>
+				<p>Recycle your high-standard raw materials (leather, paper, hessian... ). Propose or find materials that inspire you !</p>
 
 				<ul class="contact-details">
 					<li><i class="fas fa-phone"></i> <strong>Phone:</strong> <span>(+33) 06 54 43 44 45 </span></li>
@@ -35,7 +35,7 @@
 		<!-- Contact Form using gem Mail-Form and Sendgrid for Heroku -->
 		<div class="col-md-8">
 			<section id="contact">
-				<h4 class="headline margin-bottom-35">Formulaire de contact</h4>
+				<h4 class="headline margin-bottom-35">Contact form</h4>
 				<div id="contact-message"></div>
 					<%= form_for @contact do |f| %>
 						<% if flash[:error].present? %>
@@ -44,15 +44,15 @@
 
 						<div class="row">
 						<div class="col-md-6">
-							<div><%= f.text_field :name, required: true, id: "name", placeholder: "Votre nom" %></div>
+							<div><%= f.text_field :name, required: true, id: "name", placeholder: "Your name" %></div>
 						</div>
 						<div class="col-md-6">
-							<div><%= f.text_field :email, required: true, id: "email", placeholder: "Votre email" %></div>
+							<div><%= f.text_field :email, required: true, id: "email", placeholder: "Your email" %></div>
 						</div>
-						<div class="col-md-12"><%= f.text_field :topic, id: "subject", placeholder: "Sujet du message" %></div>
-						<div class="col-md-12"><%= f.text_area :message, as: :text, cols: "40", rows:"3", id: "comments", placeholder: "Votre message" %></div>
+						<div class="col-md-12"><%= f.text_field :topic, id: "subject", placeholder: "Object" %></div>
+						<div class="col-md-12"><%= f.text_area :message, as: :text, cols: "40", rows:"3", id: "comments", placeholder: "Your message" %></div>
 						
-						<%= f.submit 'Envoyer le message', class: "submit button margin-bottom-90 margin-top-60", id: "submit" %>
+						<%= f.submit 'Send', class: "submit button margin-bottom-90 margin-top-60", id: "submit" %>
 					<% end %>
 			</section>
 		</div>

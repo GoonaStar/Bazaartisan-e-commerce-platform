@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def edit
     unless user_checked
       redirect_to public_profile_path(params[:id])
-      flash[:error] = "Vous n'avez les droits pour accéder à cette page."
+      flash[:error] = "You have no rights to access to this page"
     end
   end
 
@@ -23,13 +23,13 @@ class UsersController < ApplicationController
   def show
     unless user_checked
       redirect_to public_profile_path(params[:id])
-      flash[:error] = "Vous n'avez les droits pour accéder à cette page."
+      flash[:error] = "You have no rights to access to this page"
     end
   end
 
   def new
     if user_signed_in?
-      flash[:error] = "Vous devez être déconnecté pour accéder à cette page."
+      flash[:error] = "You have to be logged in to have access to this page"
       redirect_to user_path(current_user.id)
     end
   end
@@ -37,14 +37,14 @@ class UsersController < ApplicationController
   def sales
     unless user_checked
       redirect_to public_profile_path(params[:id])
-      flash[:error] = "Vous n'avez les droits pour accéder à cette page."
+      flash[:error] = "You have no rights to access to this page"
     end
   end
 
   def orders
     unless user_checked
       redirect_to public_profile_path(params[:id])
-      flash[:error] = "Vous n'avez les droits pour accéder à cette page."
+      flash[:error] = "You have no rights to access to this page"
     end
   end
 
@@ -69,9 +69,9 @@ class UsersController < ApplicationController
   #sort of all items by status to display on profile page
   def user_sales
     @item_status = {
-      'draft' => 'Brouillons',
-      'published' => 'En ligne',
-      'sold' => 'Objets vendus'
+      'draft' => 'Drafts',
+      'published' => 'Published',
+      'sold' => 'Products sold'
     }
 
     @user_sales = @user.items.order('created_at DESC')
@@ -81,9 +81,9 @@ class UsersController < ApplicationController
   #sort of all orders by status to display on profile page
   def user_orders
     @order_status = {
-      'paid' => 'Objets payés',
-      'being_shipped' => 'En cours de livraison',
-      'shipped' => 'Objets reçus'
+      'paid' => 'Products payed',
+      'being_shipped' => 'In delivery',
+      'shipped' => 'Objects received'
     }
 
     @user_orders = @user.orders.order('created_at DESC')

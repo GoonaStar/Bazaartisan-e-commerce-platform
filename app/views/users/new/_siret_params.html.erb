@@ -1,50 +1,50 @@
 <div class='col-md-6 col-sm-12'>
 
 	<div class="field form-inline">
-	    <%= f.label :company_ID_number, "Numéro de SIRET" %>
+	    <%= f.label :company_ID_number, "ID company number" %>
 	    <%= f.text_field :company_ID_number, value: attributes[:company_ID_number], autofocus: true %>
 	</div>
 
 	<div class="field form-inline">
-	    <%= f.label :activity, "Activité" %>
+	    <%= f.label :activity, "Activity" %>
 	    <%= f.text_field :activity, autofocus: true, value: attributes[:activity], readonly:true  %>
 	</div>
 
 	<div class="field form-inline">
-	    <%= f.label :activity_id, "Activité" %>
+	    <%= f.label :activity_id, "Activity" %>
 	    <%= f.text_field :activity_id, autofocus: true, value: attributes[:activity_id], readonly:true  %>
 	</div>
 
 	<div class="field form-inline">
-	    <%= f.label :company_foundation, "Date de création" %>
+	    <%= f.label :company_foundation, "Established date" %>
 	    <%= f.text_field :company_foundation, autofocus: true, value: attributes[:company_foundation], readonly:true %>
 	</div>
 
 	<div class="field form-inline">
-		<%= f.label :invoice_entity, 'Raison sociale' %>
+		<%= f.label :invoice_entity, 'Social reason' %>
 		<%= f.text_field :invoice_entity, value: attributes[:invoice_entity], readonly:true %>
 	</div>
 
 	<div class="field form-inline">
-		<%= f.label :invoice_street, 'Rue' %>
+		<%= f.label :invoice_street, 'Street line' %>
 		<%= f.text_field :invoice_street, value: attributes[:invoice_street] %>
 	</div>
 
 	<div class="field form-inline">
-		<%= f.label :invoice_street, 'Complément' %>
+		<%= f.label :invoice_street, 'Street line 2' %>
 		<%= f.text_field :invoice_street2, value: attributes[:invoice_street2] %>
 	</div>
 
 	<div class="field form-inline">
-		<%= f.label :invoice_postcode, 'Code postal' %>
+		<%= f.label :invoice_postcode, 'Zip code' %>
 		<%= f.text_field :invoice_postcode, value: attributes[:invoice_postcode], readonly:true %>
 	</div>
 
 	<div class="field form-inline">
-		<%= f.label :invoice_city, 'Ville' %>
+		<%= f.label :invoice_city, 'City' %>
 		<%= f.text_field :invoice_city, value: attributes[:invoice_city], readonly:true %>
 	</div>
 
-	<%= f.hidden_field :invoice_country, value: 'France' %>
+	<%= f.hidden_field :invoice_country, value: 'UK' %>
 
 </div>
