@@ -25,12 +25,12 @@ end
 
     # Create 6 categories
 
-Category.create!(category_name: "Bois")
-Category.create!(category_name: "Papier")
-Category.create!(category_name: "Tissu")
-Category.create!(category_name: "Cuir")
-Category.create!(category_name: "Toile-de-jute")
-Category.create!(category_name: "Autre")
+Category.create!(category_name: "Wood")
+Category.create!(category_name: "Paper")
+Category.create!(category_name: "Cloth")
+Category.create!(category_name: "Leather")
+Category.create!(category_name: "Hessian")
+Category.create!(category_name: "Other")
  
 
     # Possible item and order status
@@ -43,13 +43,13 @@ order_status = ["paid", "being_shipped", "shipped"]
 30.times do
     # Create instances 
     item = Item.create!(
-        title: "chutes de bois - " + rand(1..15).to_s + "kg", 
+        title: "Wooden offcuts - " + rand(1..15).to_s + "kg", 
         description: Faker::Lorem.paragraph, 
         price: rand(1..50), 
         status: item_status[rand(0..3)], 
         category_id: Category.last.id-5, 
         seller_id: rand(User.first.id..User.last.id),
-        Faker_image: "bois"+rand(1..5).to_s+".jpg"
+        Faker_image: "wood"+rand(1..5).to_s+".jpg"
         )
 
 
@@ -83,13 +83,13 @@ end
 30.times do
     # Create instances 
     item = Item.create!(
-        title: "Papier " + Faker::Color.color_name, 
+        title: "Paper " + Faker::Color.color_name, 
         description: Faker::Lorem.paragraph, 
         price: rand(1..50), 
         status: item_status[rand(0..3)], 
         category_id: Category.last.id-4, 
         seller_id: rand(User.first.id..User.last.id),
-        Faker_image: "papier"+rand(1..10).to_s+".jpg"
+        Faker_image: "paper"+rand(1..10).to_s+".jpg"
         )
 
 
@@ -123,13 +123,13 @@ end
 30.times do
     # Create instances 
     item = Item.create!(
-        title: Faker::Number.number(2) + " bouts de tissu " + Faker::Color.color_name, 
+        title: Faker::Number.number(2) + " pieces of cloth " + Faker::Color.color_name, 
         description: Faker::Lorem.paragraph, 
         price: rand(1..50), 
         status: item_status[rand(0..3)], 
         category_id: Category.last.id-3, 
         seller_id: rand(User.first.id..User.last.id),
-        Faker_image: "tissu"+rand(1..7).to_s+".jpg"
+        Faker_image: "cloth"+rand(1..7).to_s+".jpg"
         )
 
 
@@ -163,13 +163,13 @@ end
 30.times do
     # Create instances 
     item = Item.create!(
-        title: Faker::Number.decimal(1, 1) + "kg de cuir (chutes)", 
+        title: Faker::Number.decimal(1, 1) + "kg of leather (offcuts)", 
         description: Faker::Lorem.paragraph, 
         price: rand(1..50), 
         status: item_status[rand(0..3)], 
         category_id: Category.last.id-2, 
         seller_id: rand(User.first.id..User.last.id),
-        Faker_image: "cuir"+rand(1..7).to_s+".jpg"
+        Faker_image: "leather"+rand(1..7).to_s+".jpg"
         )
 
 
@@ -203,13 +203,13 @@ end
 30.times do
     # Create instances 
     item = Item.create!(
-        title: "Sac de café - " + Faker::Coffee.origin, 
+        title: "Coffee bags - " + Faker::Coffee.origin, 
         description: Faker::Lorem.paragraph, 
         price: Faker::Number.between(5, 10).to_s.gsub('.', ',').to_f,
         status: item_status[rand(0..3)], 
         category_id: Category.last.id-1, 
         seller_id: rand(User.first.id..User.last.id),
-        Faker_image: "jute"+rand(1..16).to_s+".jpg"
+        Faker_image: "hessian"+rand(1..16).to_s+".jpg"
         )
 
 
