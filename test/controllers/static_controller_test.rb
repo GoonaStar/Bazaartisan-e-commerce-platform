@@ -5,3 +5,4 @@ class StaticControllerTest < ActionDispatch::IntegrationTest
   #   assert true
   # end
 end
+ # function non updated
