@@ -34,7 +34,7 @@ require 'googleauth'
 require 'googleauth/stores/file_token_store'
 require 'fileutils'
 
-	#open invoice template in GoogleSheet
+	#open invoice template in GoogleSheets
 
 
 OOB_URI = 'urn:ietf:wg:oauth:2.0:oob'.freeze
