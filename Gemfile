@@ -88,4 +88,4 @@ gem 'google-api-client'
 
 gem "will_paginate", "~> 3.1"
 gem 'httparty', '~> 0.16.2'
-
+gem 'dotenv'

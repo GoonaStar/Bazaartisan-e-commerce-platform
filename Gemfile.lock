@@ -109,6 +109,7 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.7.6)
     erubi (1.7.1)
     execjs (2.7.0)
     faker (1.9.1)
@@ -324,6 +325,7 @@ DEPENDENCIES
   country_select (~> 3.1)
   data-confirm-modal (~> 1.6)
   devise (~> 4.5)
+  dotenv
   faker (~> 1.9)
   figaro (~> 1.1)
   font-awesome-rails
