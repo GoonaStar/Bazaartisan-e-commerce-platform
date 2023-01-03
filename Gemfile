@@ -87,5 +87,5 @@ gem "data-confirm-modal", "~> 1.6"
 gem 'google-api-client'
 
 gem "will_paginate", "~> 3.1"
-gem 'httparty', '~> 0.16.2'
+gem 'httparty', '~> 0.21.0'
 gem 'dotenv'
